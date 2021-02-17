@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Webim</title>
+</head>
+<body>
+
+<!--SVG-->
+<svg style ="display: none;">
+
+    <symbol id="logo" viewBox="0 0 229 57">
+        <g>
+            <path d="M815 558 c-2 -7 -18 -78 -36 -158 -32 -150 -72 -275 -94 -299 -26
+            -27 -50 12 -110 179 -64 178 -102 240 -149 240 -35 0 -69 -47 -96 -131 -26
+            -82 -54 -145 -78 -171 -17 -21 -53 -23 -70 -6 -9 9 -12 5 -12 -18 0 -38 16
+            -54 56 -54 46 0 94 57 133 159 17 46 31 86 31 90 0 4 9 16 20 26 31 28 41 12
+            110 -170 65 -171 100 -228 144 -233 51 -6 82 43 121 191 29 110 68 344 60 357
+            -9 14 -25 12 -30 -2z"/>
+            <path d="M1270 291 c0 -246 2 -281 15 -281 9 0 18 6 21 14 5 12 12 11 45 -6
+            57 -29 104 -20 150 30 66 70 65 179 -2 246 -39 38 -39 38 -109 34 l-69 -4 -3
+            121 c-3 116 -4 120 -25 123 l-23 3 0 -280z m195 -35 c91 -91 -20 -263 -119
+            -185 -25 19 -26 25 -26 109 0 99 -1 98 73 99 38 1 53 -4 72 -23z"/>
+            <path d="M1640 535 c-20 -25 -8 -50 25 -50 21 0 31 5 33 18 4 21 -14 47 -33
+            47 -7 0 -18 -7 -25 -15z"/>
+            <path d="M950 304 c-43 -37 -60 -75 -60 -134 0 -132 106 -204 224 -152 48 22
+            55 32 32 51 -10 8 -20 8 -42 -4 -49 -25 -92 -19 -130 19 -19 19 -34 43 -34 55
+            0 19 6 21 117 23 135 3 138 6 108 85 -22 58 -62 83 -132 83 -41 0 -58 -5 -83
+            -26z m124 -25 c14 -7 32 -26 40 -43 l15 -31 -91 -3 c-50 -1 -92 -1 -95 1 -9
+            10 23 59 46 72 32 17 53 18 85 4z"/>
+            <path d="M1647 324 c-4 -4 -7 -76 -7 -161 l0 -153 25 0 26 0 -3 157 c-3 133
+            -5 158 -18 161 -9 1 -19 0 -23 -4z"/>
+            <path d="M1805 308 c-3 -13 -4 -84 -3 -158 l3 -135 25 0 25 0 3 117 3 118 29
+            15 c40 21 86 19 110 -5 18 -18 20 -33 20 -135 l0 -115 25 0 25 0 0 114 c0 112
+            1 115 26 135 36 28 95 28 120 0 16 -18 20 -40 22 -135 4 -113 4 -114 28 -114
+            24 0 24 0 24 110 0 121 -12 166 -51 194 -34 23 -104 20 -151 -6 -26 -15 -41
+            -19 -46 -12 -23 36 -121 46 -161 18 -22 -16 -24 -16 -33 0 -13 23 -37 20 -43
+            -6z"/>
+        </g>
+    </symbol>
+
+    <symbol id="vk" viewBox="0 0 24 24">
+        <g>
+            <path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
+        </g>
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 512 512">
+        <g>
+            <path d="M452,0H60C26.916,0,0,26.916,0,60v392c0,33.084,26.916,60,60,60h392c33.084,0,60-26.916,60-60V60
+            C512,26.916,485.084,0,452,0z M472,452c0,11.028-8.972,20-20,20H338V309h61.79L410,247h-72v-43c0-16.975,13.025-30,30-30h41v-62
+            h-41c-50.923,0-91.978,41.25-91.978,92.174V247H216v62h60.022v163H60c-11.028,0-20-8.972-20-20V60c0-11.028,8.972-20,20-20h392
+            c11.028,0,20,8.972,20,20V452z"/>
+        </g>
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                C480.224,136.96,497.728,118.496,512,97.248z"/>
+        </g>
+    </symbol>
+
+    <symbol id="skype" viewBox="0 0 512 512">
+        <g>
+            <path d="m361.472656 512c-22.453125 0-44.695312-4.976562-64.761718-14.441406-14.269532 2.339844-26.542969 3.441406-38.191407 3.441406-135.378906 0-245.519531-108.808594-245.519531-242.550781 0-13.023438 1.292969-26.574219 3.9375-41.214844-11.101562-21.082031-16.9375-44.613281-16.9375-68.535156 0-81.992188 67.539062-148.699219 150.558594-148.699219 25.835937 0 51.078125 6.523438 73.46875 18.929688 10.199218-1.3125 21.359375-1.929688 34.492187-1.929688 65.417969 0 126.828125 25.050781 172.917969 70.53125 46.148438 45.542969 71.5625 106.246094 71.5625 170.925781 0 17.136719-1.167969 31.671875-3.648438 45.113281 8.398438 18.761719 12.648438 38.820313 12.648438 59.730469 0 81.992188-67.527344 148.699219-150.527344 148.699219zm-58.445312-56.195312 6.144531 3.265624c15.898437 8.457032 33.984375 12.929688 52.300781 12.929688 60.945313 0 110.527344-48.761719 110.527344-108.699219 0-16.996093-3.839844-33.1875-11.417969-48.125l-3.25-6.414062 1.574219-7.015625c2.792969-12.4375 4.09375-26.191406 4.09375-43.289063 0-111.082031-91.730469-201.457031-204.480469-201.457031-14.078125 0-25.257812.78125-35.191406 2.464844l-7.464844 1.261718-6.429687-3.996093c-17.609375-10.945313-37.96875-16.730469-58.875-16.730469-60.960938 0-110.558594 48.761719-110.558594 108.699219 0 19.335937 5.234375 38.316406 15.136719 54.890625l3.988281 6.679687-1.570312 7.621094c-3.066407 14.839844-4.554688 28.105469-4.554688 40.558594 0 111.6875 92.195312 202.550781 205.519531 202.550781 10.949219 0 22.917969-1.253906 37.667969-3.945312zm81.972656-144.941407c0-14.382812-2.839844-26.75-8.503906-36.757812-5.664063-9.964844-13.628906-18.308594-23.648438-24.820313-9.851562-6.375-21.941406-11.835937-35.90625-16.304687-13.804687-4.378907-29.414062-8.410157-46.394531-12.039063-13.4375-3.085937-23.214844-5.488281-29.042969-7.085937-5.695312-1.558594-11.359375-3.769531-16.882812-6.511719-5.324219-2.644531-9.515625-5.828125-12.53125-9.421875-2.8125-3.429687-5.089844-7.390625-5.089844-12.140625 0-7.761719 5.164062-14.300781 13.933594-20 9.074218-5.929688 21.300781-8.382812 36.339844-8.382812 16.175781 0 28 2.183593 35.039062 7.503906 7.269531 5.460937 13.601562 13.257812 18.824219 23.160156 4.527343 7.734375 8.605469 13.128906 12.53125 16.582031 4.222656 3.695313 10.320312 5.355469 18.089843 5.355469 8.542969 0 15.8125-2.777344 21.539063-8.710938 5.726563-5.902343 9.703125-12.683593 9.703125-20.136718 0-7.730469-3.304688-15.730469-7.660156-23.769532-4.324219-7.972656-11.152344-15.628906-20.398438-22.816406-9.148437-7.125-20.832031-12.886718-34.636718-17.15625-13.765626-4.277344-30.253907-6.410156-49.003907-6.410156-23.417969 0-44.148437 3.214844-61.535156 9.625-17.652344 6.476562-31.382813 15.972656-40.730469 28.109375-9.476562 12.234375-15.035156 26.441406-15.035156 42.210937 0 16.546876 5.320312 30.578126 14.328125 41.800782 8.882813 11.023437 20.996094 19.835937 36.074219 26.210937 14.703125 6.207031 33.1875 11.695313 54.964844 16.339844 16.011718 3.363281 28.96875 6.550781 38.519531 9.5 9.109375 2.816406 16.679687 6.953125 22.410156 12.273437 5.425781 5.054688 8.398437 11.53125 8.398437 19.769532 0 10.414062-5.421874 18.957031-15.871093 26.042968-10.683594 7.253907-24.890625 10.117188-42.238281 10.117188-12.632813 0-22.878907-.996094-30.484376-4.59375-7.570312-3.527344-13.5-8.109375-17.589843-13.496094-4.316407-5.664062-8.367188-12.773437-12.085938-21.257812-3.320312-7.757813-7.433593-13.800782-12.292969-17.863282-5.058593-4.242187-11.28125-6.789062-18.484374-6.789062-8.769532 0-16.140626 3.121094-21.90625 8.480469-5.792969 5.421875-8.742188 12.0625-8.742188 19.695312 0 12.238281 4.519531 24.921875 13.464844 37.671875 8.777344 12.644532 20.429687 22.917969 34.53125 30.484375 19.695312 10.410157 44.984375 15.667969 75.128906 15.667969 25.085938 0 47.164062-3.863281 65.546875-11.453125 18.589844-7.660156 32.921875-18.476563 42.636719-32.140625 9.75-13.699219 14.671875-29.359375 14.691406-46.542969zm0 0"/>
+        </g>
+    </symbol>
+
+</svg>
+<!--/.SVG-->
+
+<!--Loader-->
+<div class="mask">
+    <div class="loader"></div>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container container--more">
+        <div class="header__inner">
+            <button class="burger" type="button" id="burgerButton">
+                <span class="burger__item"></span>
+            </button>
+            <div class="header__router">
+                <nav class="nav" id="nav">
+                    <div class="login__list">
+                        <button class="login--btn">Вход</button>
+                        <button class="login--btn">Регистрация</button>
+                    </div>
+                    <div class="link__list">
+                        <a class="nav__link" href="#">Возможности</a>
+                        <a class="nav__link" href="#">Тарифы</a>
+                        <a class="nav__link" href="#">Партнёрам</a>
+                        <a class="nav__link" href="#">Помощь</a>
+                    </div>
+                </nav>
+                <div class="logo">
+                    <img class="logo--img" src="img/logo/logo.png" alt="Webim">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /.Header -->
+
+<!-- Inatallation -->
+<section class="install">
+    <div class="container">
+        <div class="install__intro">
+            <h1 class="title title--install animation">Установка Webim</h1>
+            <p class="text animation">Установка онлайн-консультанта Webim на ваш сайт не займет много времени.</p>
+            <p class="text text--install animation">Вы можете установить онлайн-консультант Webim на ваш сайт и протестировать <br>
+            его в течение 7 дней бесплатно.</p>
+            <div class="button__row">
+                <button class="button animation">Попробовать бесплатно</button>
+                <button class="button button--purple animation">Тарифы</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.Inatallation -->
+
+<!--Simple mounting-->
+<section class="mounting">
+    <div class="container">
+        <div class="mounting__inner">
+            <h1 class="title title--mounting animation">Простая установка</h1>
+            <p class="text text--mounting animation">Установка онлайн-консультанта Webim не займет более 15 минут</p>
+            <div class="mounting__list">
+
+                <div class="mountitng__item animation">
+                    <div class="mounting__img">
+                        <div class="mount--front">
+                            <img class="mount--svg" src="img/installation/01.svg" alt="">
+                        </div>
+                        <div class="mount--back">
+                            <span class="mount--number">1</span>
+                        </div>
+                    </div>
+                    <a class="mounting__link" href="#">Регистрация</a>
+                </div>
+
+                <div class="mountitng__item animation">
+                    <div class="mounting__img">
+                        <div class="mount--front">
+                            <img class="mount--svg" src="img/installation/02.svg" alt="">
+                        </div>
+                        <div class="mount--back">
+                            <span class="mount--number">2</span>
+                        </div>
+                    </div>
+                    <a class="mounting__link" href="#">Установка HTML-кода</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--Simple mounting-->
+
+<!-- Install HTML code -->
+<section class="code">
+    <div class="container">
+        <div class="code__inner">
+            <h1 class="title title--code animation">Установка HTML-кода</h1>
+            <ul class="install__list">
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка HTML-кода Webim для сайтов на Joomla</a>
+                    <p class="install__text">Документация по внедрению сервиса Webim на сайтах, построенных на базе <span class="bold">CMS Joomla.</span></p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка HTML-кода Webim для сайтов на Wordpress</a>
+                    <p class="install__text">Документация по внедрению сервиса Webim на сайтах, построенных на базе <span class="bold">Wordpress.</span></p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка HTML-кода Webim для сайтов на uCoz.ru</a>
+                    <p class="install__text">Документация по внедрению сервиса Webim на сайтах, построенных на базе <span class="bold">uCoz.ru.</span></p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка HTML-кода Webim для сайтов на Webasyst.ru</a>
+                    <p class="install__text">Документация по внедрению сервиса Webim на сайтах, построенных на базе <span class="bold">Webasyst.ru.</span></p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка HTML-кода Webim для любого сайта</a>
+                    <p class="install__text">Документация по внедрению сервиса Webim на сайтах с другой CMS или написанных вручную</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.Install HTML -->
+
+<!-- Dashboard -->
+<section class="dashboard">
+    <div class="container">
+        <div class="dashboard__inner">
+            <h1 class="title title--dashboard  animation">Установка приложения <br>для операторов WEBIM DASHBOARD</h1>
+            <p class="text text--dashboard animation">Чтобы быть на связи с клиентами всегда, установите приложение Webim Dashboard</p>
+
+            <ul class="install__list">
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка приложения Webim Dashboard для iPhone</a>
+                    <p class="install__text">Документация по установке дополнительного программного обеспечения для операторов <br><span class="bold">сервиса Webim</span>, использующих iPhone/iPad/etc от компании Apple.</p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка приложения Webim Dashboard для Android</a>
+                    <p class="install__text">Документация по установке дополнительного программного обеспечения для операторов <br><span class="bold">сервиса Webim</span>, использующих платформу Google Android.</p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка приложения Webim Dashboard для Ubuntu</a>
+                    <p class="install__text">Документация по установке дополнительного программного обеспечения для операторов <br><span class="bold">сервиса Webim</span>, использующих платформу Ubuntu.</p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Установка приложения Webim Dashboard</a>
+                    <p class="install__text">Документация по установке дополнительного программного обеспечения для операторов <br><span class="bold">сервиса Webim</span> под ОС Microsoft Windows.</p>
+                </li>
+
+                <li class="install__item animation">
+                    <a class="install__title" href="#">Создание приложения Webim для Mac OS </a>
+                    <p class="install__text">Пошаговая инструкция создания приложения для оператора Webim для Mac OS с помощью Fluid</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.Dashboard -->
+
+<!-- Step -->
+<section class="step">
+    <div class="container">
+        <div class="step__inner">
+            <h1 class="title title--step animation">Что вас ждет после установки</h1>
+            <p class="text text--step animation">Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет</p>
+            <div class="step__list">
+                <div class="step__item animation">
+                    <div class="step__icon">
+                        <img class="step__img" src="img/step/step_01.svg" alt="">
+                    </div>
+                    <h4 class="step__text"><span class="bold bold--purple">Шаг 1.</span>&nbsp;Создание учетной записи компании и администратора</h4>
+                </div>
+
+                <div class="step__item animation">
+                    <div class="step__icon">
+                        <img class="step__img" src="img/step/step_02.svg" alt="">
+                    </div>
+                    <h4 class="step__text"><span class="bold bold--purple">Шаг 2.</span>&nbsp;Активация учетной записи</h4>
+                </div>
+
+                <div class="step__item animation">
+                    <div class="step__icon">
+                        <img class="step__img" src="img/step/step_03.svg" alt="">
+                    </div>
+                    <h4 class="step__text"><span class="bold bold--purple">Шаг 3.</span>&nbsp;Начальная настройка</h4>
+                </div>
+
+                <div class="step__item animation">
+                    <div class="step__icon">
+                        <img class="step__img" src="img/step/step_04.svg" alt="">
+                    </div>
+                    <h4 class="step__text"><span class="bold bold--purple">Шаг 4.</span>&nbsp;Установка кнопки Webim на сайт</h4>
+                </div>
+
+                <div class="step__item animation">
+                    <div class="step__icon">
+                        <img class="step__img" src="img/step/step_05.svg" alt="">
+                    </div>
+                    <h4 class="step__text"><span class="bold bold--purple">Шаг 5.</span>&nbsp;Регистрация оператора</h4>
+                </div>
+
+                <div class="step__item animation">
+                    <div class="step__icon">
+                        <img class="step__img" src="img/step/step_06.svg" alt="">
+                    </div>
+                    <h4 class="step__text"><span class="bold bold--purple">Шаг 6.</span>&nbsp;Тест сервиса</h4>
+                </div>
+
+            </div>
+
+            <div class="button__row">
+                <button class="button animation">Все возможности Webim</button>
+                <button class="button button--purple button--purple--static animation">Протестировать бесплатно</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- /.Step -->
+
+<!-- Communication -->
+<div class="communication">
+    <div class="container">
+        <div class="communication__inner">
+            <p class="text text--communication animation">Webim – это не только онлайн-консультант. Интегрируйте и другие каналы, чтобы клиенты могли обращаться к вам любым удобным способом </p>
+            <div class="communication__list">
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/1.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Социальные сети</a>
+                </div>
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/2.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Форма обратной связи</a>
+                </div>
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/3.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Чат в вашем <br>мобильном приложении</a>
+                </div>
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/4.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Мессенджеры</a>
+                </div>
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/5.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Яндекс.Диалоги</a>
+                </div>
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/6.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Электронная почта</a>
+                </div>
+
+                <div class="communication__item animation">
+                    <div class="communication--icon">
+                        <img class="communication__img" src="img/communication/7.svg" alt="">
+                    </div>
+                    <a class="communication__link" href="#">Чат-боты</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Communication -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container container--more">
+        <div class="footer__inner">
+            <div class="footer__main">
+
+                <div class="footer__logo animation">
+                    <div class="logo--icon">
+                        <img src="img/logo/logo-removebg.png" alt="" class="footer--img">
+                    </div>
+                    <p class="text text--logo animation">Webim 2008-2017 <br>Все права защищены</p>
+                </div>
+
+                <div class="footer__tel animation">
+                    <div class="tel__item">
+                        <a href="tel:+78005004932" class="tel tel--more">+7(800) 500-49-32</a>
+                    </div>
+                    <div class="tel__item">
+                        <a href="tel:+74993223754" class="tel">+7 (499) 322-37-54</a>
+                        <p class="address">Москва, Серебряническая набережная, 29</p>
+                    </div>
+
+                    <div class="tel__item">
+                        <a href="tel:+78123855337" class="tel">+7 (812) 385-53-37</a>
+                        <p class="address">Санкт-Петербург, Чкаловский проспект, 15</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer__social animation">
+
+                <a class="mail__link" href="#" type="mailto:contact@webim.ru">contact@webim.ru</a>
+                <a class="mail__link" href="#" type="mailto:sales@webim.ru">sales@webim.ru</a>
+
+                <p class="text text--logo">понедельник - пятница с 10.00 - 18.00</p>
+
+                <div class="social">
+                    <div class="social__item">
+                        <a class="social--img" href="#">
+                            <svg class="social--svg">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="social__item">
+                        <a class="social--img" href="#">
+                            <svg class="social--svg">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="social__item">
+                        <a class="social--img" href="#">
+                            <svg class="social--svg">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="social__item">
+                        <a class="social--img" href="#">
+                            <svg class="social--svg">
+                                <use xlink:href="#skype"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /.Footer -->
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
