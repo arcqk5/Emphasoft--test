@@ -1106,6 +1106,7 @@ li {
 
     .mount--back {
         display: none;
+        overflow: hidden;
     }
 
     /*  Title and text  */
@@ -1173,6 +1174,12 @@ li {
 }
 
 @media (max-width: 467px) {
+    
+    .container {
+        padding: auto;
+    }
+
+
     .logo {
         display: none;
     }
@@ -1180,10 +1187,29 @@ li {
     .button {
         font-size: 14px;
     }
+
+    .button:first-child {
+        margin-right: 0;
+    }
 }
 
+@media (max-width: 399px) {
+    .mounting__list {
+        flex-wrap: wrap;
+    }
 
+    .mounting__item {
+        margin: 0;
+    }
 
+    .mountitng__item:first-child {
+        margin-bottom: 95px;
+    } 
+}
+
+@media (max-width: 321px) {
+    /*In progress*/
+}
 
 
 
